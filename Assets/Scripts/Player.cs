@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
     int currentHp;
     [SerializeField, Range(0.1f, 15f)]
     float moveSpeed = 2f;
+    SpriteRenderer gato;
+
+    void Awake(){
+        gato = GetComponent<SpriteRenderer>();
+    }
 
     void Start()
     {
@@ -18,6 +23,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.right * Axis.x * moveSpeed * Time.deltaTime);
+        gato.flipX = Flip;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -57,5 +63,10 @@ public class Player : MonoBehaviour
     Vector2 Axis
     {
         get => new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+    }
+
+    bool Flip 
+    {
+        get => Axis.x > 0 ? false : Axis.x < 0f ? true : gato.flipX;
     }
 }
