@@ -1,13 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Sounds.meta
-guid: 8b79d97be2b5a6547b82724a91a9cf10
+guid: b05e2def278664d4d8df2bc041d87ffe
 =======
 guid: eef1df3da0716cd41997bd4f7f8b3ebd
 >>>>>>> c8de9cca89326c55c023844de725ac431629c665:Assets/Animations/Player.meta
-=======
-guid: 8b79d97be2b5a6547b82724a91a9cf10
->>>>>>> c8de9cca89326c55c023844de725ac431629c665
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
