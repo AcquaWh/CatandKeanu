@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: a7bfcb2df68b8e14c8a4bd71c0ac388b
+guid: f60c85074349840468ca7e02ed4730d1
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 6234541410172844975
-    second: pepino-walk_0
-  - first:
-      213: 7229448476183693842
-    second: pepino-walk_1
-  - first:
-      213: 321028447716103465
-    second: pepino-walk_2
-  - first:
-      213: 1699592864493850742
-    second: pepino-walk_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -133,91 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: pepino-walk_0
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 64
-        width: 721
-        height: 1307
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fabb0da616a858650800000000000000
-      internalID: 6234541410172844975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pepino-walk_1
-      rect:
-        serializedVersion: 2
-        x: 927
-        y: 82
-        width: 736
-        height: 1307
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21a0be8f519245460800000000000000
-      internalID: 7229448476183693842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pepino-walk_2
-      rect:
-        serializedVersion: 2
-        x: 1839
-        y: 73
-        width: 870
-        height: 1316
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 925d9ec1ca5847400800000000000000
-      internalID: 321028447716103465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pepino-walk_3
-      rect:
-        serializedVersion: 2
-        x: 2855
-        y: 110
-        width: 870
-        height: 1316
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 670d1f694ba269710800000000000000
-      internalID: 1699592864493850742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
