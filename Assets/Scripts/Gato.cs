@@ -4,6 +4,11 @@ using UnityEngine;
 using System.Linq;
 using Platform2DUtils.GameplaySystem;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CapsuleCollider2D))]
+
 public class Gato : MonoBehaviour
 {
     protected Animator anim;
@@ -21,7 +26,6 @@ public class Gato : MonoBehaviour
     protected float jumpForce = 7f;
     [SerializeField, Range(0.1f, 20f)]
     protected float maxVelX = 1f;
-
 
     void Awake(){
         anim = GetComponent<Animator>();
@@ -43,4 +47,18 @@ public class Gato : MonoBehaviour
         Gizmos.color = rayColor;
         Gizmos.DrawRay(transform.position, Vector2.down * rayDistance);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Whiskas"))
+        {
+            Comida whiskas = other.GetComponent<Comida>();
+            Gamemanager.instance.Score.AddPoints(whiskas.Points);
+            Destroy(other.gameObject);
+        } else if(other.CompareTag("Pepino"))
+        {
+             Destroy(other.gameObject);
+        }
+    }
+    
 }
