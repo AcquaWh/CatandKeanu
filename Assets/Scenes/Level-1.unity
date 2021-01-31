@@ -919,7 +919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628794692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.32, y: 3.98, z: 0}
+  m_LocalPosition: {x: 23.58, y: 21.56, z: 0}
   m_LocalScale: {x: 0.8168967, y: 0.8168967, z: 0.8168967}
   m_Children:
   - {fileID: 1113016328}
@@ -2630,7 +2630,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885514519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.88, y: 6.38, z: 0}
+  m_LocalPosition: {x: 16.02, y: 22.54, z: 0}
   m_LocalScale: {x: 0.41814274, y: 0.41814274, z: 0.41814274}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3043,7 +3043,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  jumpForce: 12.66
+  jumpForce: 13.05
   maxVelX: 18.04
 --- !u!70 &1906698905
 CapsuleCollider2D:
@@ -3097,12 +3097,12 @@ PrefabInstance:
     - target: {fileID: 930632679682458765, guid: e4b87b32a53b09b4488a9094cac0b757,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.435564
+      value: 40.07
       objectReference: {fileID: 0}
     - target: {fileID: 930632679682458765, guid: e4b87b32a53b09b4488a9094cac0b757,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.7
+      value: 26.07
       objectReference: {fileID: 0}
     - target: {fileID: 930632679682458765, guid: e4b87b32a53b09b4488a9094cac0b757,
         type: 3}
