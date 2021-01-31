@@ -19,7 +19,7 @@ public class Gato : MonoBehaviour
     LayerMask groundLayer;
     [SerializeField, Range(0.1f, 20f)]
     protected float jumpForce = 7f;
-    [SerializeField, Range(0.1f, 10f)]
+    [SerializeField, Range(0.1f, 20f)]
     protected float maxVelX = 1f;
 
 
