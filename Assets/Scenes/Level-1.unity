@@ -447,9 +447,9 @@ GameObject:
   - component: {fileID: 1906698903}
   - component: {fileID: 1906698902}
   - component: {fileID: 1906698901}
-  - component: {fileID: 1906698904}
   - component: {fileID: 1906698906}
   - component: {fileID: 1906698905}
+  - component: {fileID: 1906698904}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -550,12 +550,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1906698900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95cf7fdb5a35cd54b9aaa812250ebd68, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed9a0320c2627f41bc7dd1ad06d65ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4.1
-  rayColor: {r: 1, g: 0, b: 0.7725029, a: 0}
-  rayDistance: 2.9
+  rayColor: {r: 1, g: 0, b: 1, a: 1}
+  rayDistance: 2.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
