@@ -55,9 +55,11 @@ public class Gato : MonoBehaviour
             Comida whiskas = other.GetComponent<Comida>();
             Gamemanager.instance.Score.AddPoints(whiskas.Points);
             Destroy(other.gameObject);
-        } else if(other.CompareTag("Pepino"))
+        } else if(other.CompareTag("Pepinillo"))
         {
-             Destroy(other.gameObject);
+            Pepinillo pepinillo = other.GetComponent<Pepinillo>();
+            Gamemanager.instance.Score.DeletePoints(pepinillo.Daño);
+            Destroy(other.gameObject);
         }
     }
     
