@@ -1,20 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Player : MonoBehaviour
 {
     Animator anim;
-    [SerializeField]
-    int maxHp = 5;
-    int currentHp;
-    SpriteRenderer gato;
+    SpriteRenderer spr;
     Rigidbody2D rb2D;
-    [SerializeField, Range(0.1f, 15f)]
+    [SerializeField, Range(0.1f, 20f)]
     float moveSpeed = 2f;
-
     [SerializeField]
-    Color rayColor;
+    Color rayColor = Color.magenta;
     [SerializeField, Range(0.1f, 20f)]
     float rayDistance = 5f;
     [SerializeField]
@@ -22,82 +19,42 @@ public class Player : MonoBehaviour
     [SerializeField, Range(0.1f, 20f)]
     float jumpForce = 7f;
 
-
     void Awake(){
         anim = GetComponent<Animator>();
-        gato = GetComponent<SpriteRenderer>();
+        spr = GetComponent<SpriteRenderer>();
         rb2D = GetComponent<Rigidbody2D>();
     }
 
-    void Start()
-    {
-        currentHp = maxHp;   
-    }
-
-    void Update()
-    {
+    void Update(){
         transform.Translate(Vector2.right * Axis.x * moveSpeed * Time.deltaTime);
-        gato.flipX = Flip;
+        spr.flipX = Flip;
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate(){
         if(Grounding)
         {
-            if(JumpButton)
-            {
-                rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);   
-            }
+           if(JumpButton)
+           {
+               rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+               anim.SetTrigger("jump");
+           }
         }
     }
 
     void LateUpdate()
     {
-       anim.SetBool("grounding", Grounding);
+        anim.SetFloat("moveX", Mathf.Abs(Axis.x));
+        anim.SetBool("grounding", Grounding);
     }
-
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Pepino")) 
-        {
-            Destroy(other.gameObject);
-            currentHp--;
-            Debug.Log(currentHp);
-
-            if (fatalDamage)
-            {
-                die();
-            } 
-        }
-        else if (other.CompareTag("Whiskas")) 
-        {
-            if (currentHp + 1 <= maxHp)
-            {
-                Destroy(other.gameObject);
-                currentHp++;
-            }
-            Debug.Log(currentHp);
-        }
-    }
-
-    private void die()
-    {
-        // TODO: Animaciones de muerte y la v
-        Debug.Log("DEAD");
-    }
-
-    private bool fatalDamage
-    {
-        get => currentHp <= 0;
-    }
-
+    
     Vector2 Axis
     {
         get => new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
 
-    bool Flip 
+    bool Flip
     {
-        get => Axis.x > 0 ? false : Axis.x < 0f ? true : gato.flipX;
+        get => Axis.x > 0 ? false : Axis.x < 0f ? true : spr.flipX;
     }
 
     bool Grounding

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animations/Player.meta
+<<<<<<< HEAD:Assets/Sounds.meta
+guid: b05e2def278664d4d8df2bc041d87ffe
+=======
+guid: eef1df3da0716cd41997bd4f7f8b3ebd
+>>>>>>> c8de9cca89326c55c023844de725ac431629c665:Assets/Animations/Player.meta
+=======
+guid: ffd318dbb37362c4f8d87863d082b2fd
+>>>>>>> fer:Assets/ExampleAssets/Materials.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
